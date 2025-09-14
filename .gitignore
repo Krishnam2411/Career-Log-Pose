@@ -1,0 +1,51 @@
+# Career Log Pose .gitignore
+
+# System Files
+.DS_Store
+Thumbs.db
+*.log
+
+# Environment variables
+.env*
+!.env.example
+
+# IDE specific files
+.idea/
+.vscode/
+*.code-workspace
+
+# Node.js (Client)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Next.js specific
+/apps/client/.next/
+/apps/client/out/
+/apps/client/build/
+/apps/client/*.tsbuildinfo
+/apps/client/next-env.d.ts
+
+# Python (Server)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Build outputs
+/dist/
+/build/
+/.next/
+/out/
+
+# Coverage reports
+/coverage/
+.coverage
+htmlcov/

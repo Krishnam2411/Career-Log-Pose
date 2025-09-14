@@ -1,0 +1,32 @@
+{
+  "name": "career-log-pose",
+  "version": "1.0.0",
+  "description": "An eternal career advisor",
+  "private": true,
+  "scripts": {
+  "dev": "concurrently \"bun run dev:client\" \"bun run dev:server\"",
+  "dev:client": "cd apps/client && bun run dev",
+  "dev:server": "cd apps/server && ENV=development ./run.sh",
+  "build": "bun run build:client && bun run build:server",
+  "build:client": "cd apps/client && bun run build",
+  "build:server": "cd apps/server && pip install -r requirements.txt",
+  "start": "concurrently \"bun run start:client\" \"bun run start:server\"",
+  "start:client": "cd apps/client && bun run start",
+  "start:server": "cd apps/server && ENV=production ./run.sh",
+  "setup": "bun install && cd apps/client && bun install && cd ../server && ( [ -d .venv ] || python3 -m venv .venv ) && . .venv/bin/activate && python3 -m pip install --upgrade pip && python3 -m pip install -r requirements.txt",
+  "clean": "rm -rf node_modules apps/client/node_modules apps/client/.next apps/server/__pycache__ apps/server/.venv"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krishnam2411/Career-Log-Pose.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Krishnam2411/Career-Log-Pose/issues"
+  },
+  "homepage": "https://github.com/Krishnam2411/Career-Log-Pose#readme"
+}
