@@ -21,7 +21,6 @@ export default function Header() {
   return (
     <header className="w-full px-4 py-4 md:px-8">
       <nav className="flex items-center justify-between max-w-7xl mx-auto">
-        {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 z-50 relative">
           <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
             <span className="text-sm font-bold text-gray-900">✦</span>
@@ -31,8 +30,7 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Desktop Navigation Links */}
-        <div className="flex items-center space-x-6">
+  <div className="flex items-center space-x-6">
           {user ? (
             pathname === '/' ? (
               <Link
